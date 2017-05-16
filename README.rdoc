@@ -1,0 +1,3 @@
+== README
+
+The Rails backend for "Vez de Quem?" app

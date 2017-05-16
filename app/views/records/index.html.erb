@@ -1,0 +1,35 @@
+<h1>User Records</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Took</th>
+      <th colspan="2">Last taking</th>
+      <th>Paid</th>
+      <th colspan="2">Last payment</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @records.each do |record| %>
+      <tr>
+        <td><%= record.user.nick_name %></td>
+        <td><%= record.user.email %></td>
+
+        <td><%= record.taken %></td>
+        <td><%= record.last_taking %></td>
+        <td><%= record.last_taken %></td>
+
+        <td><%= record.paid %></td>
+        <td><%= record.last_payment %></td>
+        <td><%= record.last_paid %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<td><%= link_to 'Back', @group %></td>

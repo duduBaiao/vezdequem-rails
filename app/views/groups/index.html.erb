@@ -1,0 +1,22 @@
+<p>Connected as <%= current_user.nick_name %>. <%= link_to('Logout', destroy_user_session_path, :method => :delete) %></p>
+
+<h1>My Groups</h1>
+
+<table>
+  <tbody>
+    <% @groups.each do |group| %>
+      <tr>
+        <td><%= group.name %></td>
+        <td><%= group.purpose %></td>
+        <td><%= group.choose_takers %></td>
+        <td><%= link_to 'Show', group %></td>
+        <td><%= link_to 'Edit', edit_group_path(group) %></td>
+        <td><%= link_to 'Leave', leave_group_path(group), method: :delete %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Group', new_group_path %>

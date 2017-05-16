@@ -1,0 +1,12 @@
+<p>
+  <strong>Name: </strong><%= @group.name %>
+</p>
+<p>
+  <strong>Purpose: </strong><%= @group.purpose %>
+</p>
+<p>
+  <strong>Choose takers: </strong><%= @group.choose_takers %>
+</p>
+
+<%= link_to 'Show Users', group_records_path(@group) %> |
+<%= link_to 'Back', groups_path %>
